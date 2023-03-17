@@ -1,0 +1,11 @@
+name: Deploy to dev
+on: workflow_dispatch
+jobs:
+  deployment:
+    name: Deploy to Dev
+    runs-on: ubuntu-latest
+    environment: dev
+    steps:
+      - env:
+          NAME: ${{ vars.NAME  }}
+        run: echo $NAME
