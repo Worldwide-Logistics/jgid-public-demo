@@ -1,0 +1,12 @@
+name: Deploy to uat
+on:
+  push:
+    branches: [uat]
+jobs:
+  deployment:
+    name: Deploy to UAT
+    runs-on: ubuntu-latest
+    steps:
+      - env:
+          NAME: UAT
+        run: echo $NAME
